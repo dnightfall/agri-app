@@ -1,0 +1,211 @@
+body, html {
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan hanya ada scrollbar vertikal jika dibutuhkan */
+    height: 100%;
+    background-color: #f4f4f4;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 300px;
+    padding: 1px 16px 16px;
+    align-items: center;
+}
+.top {
+    width: 95%;
+    height: auto;
+    padding: 16px;
+    padding-top: 1px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 100px;
+}
+.middle h1 {
+    font: 600 20px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    margin-left: 0;
+    margin-right: auto;
+}
+.select-kontrol {
+    display: flex;
+    margin-left: 0;
+    margin-right: auto;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    /* border-bottom: 1.5px solid #C6C2DE; */
+}
+.select-kontrol a {
+    text-decoration: none;
+    font: 500 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 7px;
+    padding-bottom: 9px; /* Tambahkan padding-bottom untuk ruang border */
+    box-sizing: border-box;
+}
+.select-kontrol a.active {
+    color: #1D4AE8;
+}
+.select-kontrol a:hover {
+    color: #1D4AE8;
+    border-bottom: 2px solid #1D4AE8;
+    z-index: 2;
+}
+.border {
+    display: flex;
+    height: 1.5px;
+    width: 100%;
+    background-color: #C6C2DE;
+    z-index: 1;
+}
+.fill {
+    display: flex;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.filter{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #F3F9FA;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-left: 0;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.filter p {
+    font: 400 16px/0.5 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #25213B;
+}
+.tambah {
+    display: flex;
+    background-color: #1D4AE8;
+    font: 500 12px/2 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #ffffff;
+    height: 39px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+.tambah.hover{
+    cursor: pointer;
+}
+table {
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+    border-collapse: collapse;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+  }
+  th {
+    font: 500 12px/2 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #000000;
+    text-decoration: solid;
+    background-color: #F3F9FA;
+  }
+  td {
+    font: 600 12px/2 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #000000;
+    text-decoration: solid;
+  }
+  td, th {
+    border: 1.3px solid #D9D5EC;
+    text-align: center;
+    padding: 8px;
+    border-left: none;
+    border-right: none;
+  }
+  .table-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  td img {
+    width: 100px;
+    height: auto;
+  }
+  .image {
+    width: 200px;
+  }
+  table .active {
+    display: flex;
+    flex-direction: row;
+    background-color: #1D4AE8;
+    gap: 5px;
+    width: 58px;
+    height: 19px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font: 500 12px/2 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #ffffff;
+    border-radius: 10px;
+  }
+  .active .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+  }
+  .ch {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: auto;
+    height: 19px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    font: 500 12px/2 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #000000;
+    border-radius: 10px;
+  }
+  .ch .check {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1D4AE8;
+    color: #1D4AE8;
+    border-radius: 10px;
+  }
+  .top-page a {
+    font: 500 12px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}

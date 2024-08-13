@@ -1,0 +1,154 @@
+/* merekap.css */
+
+/* Mengatur gaya umum halaman */
+body, html {
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan hanya ada scrollbar vertikal jika dibutuhkan */
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+/* Mengatur gaya container */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 300px;
+    padding: 1px 16px 16px;
+    align-items: center;
+}
+
+/* Mengatur gaya judul */
+.top {
+    width: 95%;
+    height: auto;
+    padding: 16px;
+    padding-top: 1px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+th, td {
+    padding: 20px;
+    text-align: center;
+    font: 500 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+th {
+    background-color: #F3F9FA;
+    padding: 20px;
+    font: 600 15px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+td a {
+    padding: 10px;
+    background-color: #e2d702;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+td a:hover {
+    background-color: #c0b602;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+    margin: 15% auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-header, .modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    margin: 0;
+}
+
+.close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.close:hover {
+    background-color: rgb(254, 35, 35);
+    color: white;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}  
+.btn.generate {
+    background-color: #1D4AE8;
+    color: white;
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+} 
+.btn.generate:hover {
+    background-color: #193ec4;
+}
+h5 {
+    font: 600 20px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: black
+}
+.btn.tutup {
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+.btn.donlod {
+    background-color: #1D4AE8;
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: white;
+}

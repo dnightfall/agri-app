@@ -1,0 +1,150 @@
+body {
+    position: relative;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+.login-page {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+.login-form {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.login-form h1 {
+    font: 700 22px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+form {
+    margin-bottom: 18px;
+}
+.login-form p {
+    height: auto;
+    width: 350px;
+    margin-bottom: 38px;
+    font: 400 15px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+.login-form label {
+    font: 500 14px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+.username {
+    margin-bottom: -10px;
+}
+.login-form input {
+    width: 268px;
+    height: 12px;
+    border-radius: 7px;
+    background-color: #F7FBFF;
+    border-color: #D4D7E3;
+    border-style: solid;
+    outline: #0534f2;
+    padding: 8px;
+}
+.login-image {
+    display: flex;
+    position: relative;
+    width: 222px;
+    height: 510px;
+}
+
+.forgot {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: 77px;
+    font: 500 14px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #1E4AE9;
+}
+.sign-in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1D4AE8;
+    font: 500 13px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+    width: 289px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+.sign-in:hover {
+    background-color: #183cc0;
+}
+.or {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.seperator {
+    display: flex;
+    width: 117px;
+    height: 1px;
+    background-color: #CFDFE2;
+}
+.or p {
+    margin-top: -6px;
+    font: 400 12px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: #294957;
+    margin-left: 12px;
+    margin-right: 12px;
+    width: 15px;
+}
+.google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F3F9FA;
+    font: 500 12px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    text-decoration: none;
+    color: #313957;
+    border-radius: 7px;
+    width: 272px;
+    height: 35px;
+    border: none;
+    gap: 10px;
+}
+.google img {
+    height: 21px;
+    width: 21px;
+}
+.google p{
+    width: auto;
+}
+.sign-up {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: auto;
+    font: 500 12px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    flex-direction: row;
+    width: 180px;
+}
+.sign-up p {
+    color: #313957;
+}
+.sign-up a{
+    color: #1E4AE9;
+    height: auto;
+    width: 120px;
+    margin-top: 12px;
+    text-decoration: none;
+}
+.copyright{
+    font: 500 10px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-bottom: 0;
+    color: #959CB6;
+}

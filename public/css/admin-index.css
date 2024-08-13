@@ -1,0 +1,101 @@
+body, html {
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan hanya ada scrollbar vertikal jika dibutuhkan */
+    height: 100%;
+    background-color: #f4f4f4;
+}
+/* -------------------------------------------sidebar--------------------------------------- */
+
+h1 {
+    color: #333;
+    font: 700 20px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin-left: 0;
+    margin-right: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 300px;
+    padding: 1px 16px 16px;
+    align-items: center;
+}
+.top {
+    width: 95%;
+    height: auto;
+    padding: 16px;
+    padding-top: 1px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+.header-buttons {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.btn {
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    padding: 9px;
+    background-color: #1D4AE8;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn.left {
+    margin-left: 0;
+    margin-right: auto;
+}
+.btn.right {
+    margin-left: auto;
+    margin-right: 0;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+th {
+    background-color: #F3F9FA;
+    padding: 20px;
+    font: 600 15px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+.btn.delete {
+    background-color: #ff0202;
+}
+.btn.delete:hover {
+    background-color: #c40202;
+}
+.btn.progress {
+    background-color: #fff200;
+    padding: 6.5px;
+}
+.btn.progress:hover {
+    background-color: #e2d702;
+}

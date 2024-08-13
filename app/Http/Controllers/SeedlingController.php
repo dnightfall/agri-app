@@ -12,6 +12,7 @@ class SeedlingController extends Controller
         $seedlings = Seedling::all();
         return view('seedlings.index', compact('seedlings'));
     }
+    
 
     public function create()
     {
@@ -20,26 +21,50 @@ class SeedlingController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'planting_date' => 'required|date',
+        $validatedData = $request->validate([
             'seed_name' => 'required|string|max:255',
-            'tray_count' => 'required|integer|min:1',
+            'planting_date' => 'required|date',
+            'tray_count' => 'required|integer', // Validasi untuk tray_count
         ]);
 
-        Seedling::create([
-            'planting_date' => $request->planting_date,
-            'seed_name' => $request->seed_name,
-            'tray_count' => $request->tray_count,
-        ]);
+        Seedling::create($validatedData);
 
-        return redirect()->route('seedlings.index');
+        return redirect()->route('seedlings.index')->with('success', 'Data bibit berhasil ditambahkan.');
     }
 
     public function destroy($id)
     {
+        // Temukan data bibit berdasarkan ID
         $seedling = Seedling::findOrFail($id);
+        
+        // Hapus data bibit dari database
         $seedling->delete();
+    
+        // Redirect kembali ke halaman rekap dengan pesan sukses
+        return redirect()->route('seedlings.index')->with('success', 'Data bibit berhasil dihapus.');
+    }
+    
+
+    public function rekap()
+    {
+        $seedlings = Seedling::where('completed', true)->get();
+        return view('seedlings.rekap', compact('seedlings'));
+    }
+    public function complete($id)
+    {
+        $seedling = Seedling::find($id);
+        if ($seedling) {
+            // Tandai bibit sebagai selesai atau lakukan tindakan yang diinginkan
+            $seedling->completed = true; // Contoh, tambahkan kolom 'completed' di database
+            $seedling->save();
+        }
 
         return redirect()->route('seedlings.index');
     }
+    public function show($id)
+{
+    $seedling = Seedling::findOrFail($id);
+    return view('seedlings.show', compact('seedling'));
+}
+
 }

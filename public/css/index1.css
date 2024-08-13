@@ -1,0 +1,634 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan hanya ada scrollbar vertikal jika dibutuhkan */
+    height: 100%;
+}
+.top {
+    display: flex;
+    flex-direction: column  ;
+
+}
+.img-container {
+    position: relative; /* Kontainer untuk gambar dan teks */
+}
+.img-header {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+}
+.header {
+    transition: top 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 999;
+    /* background-color: rgba(255, 255, 255, 0.104); */
+    backdrop-filter: blur(2px);
+    border-bottom-style: solid;
+    border-bottom-color: #B8B8B8;
+    border-bottom-width: 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.header img {
+    margin-left: 60px;
+    margin-right: auto;
+    opacity: 2;
+    width: 20%;
+    height: auto;
+}
+.header-item {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-right: 50px;
+}
+.item {
+    font: 600 15px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+}
+.item:hover {
+    color: #1D4AE8;
+}
+.item.active {
+    color: #1D4AE8;
+}
+.header.scrolled {
+    top: -100px; /* Geser header keluar dari tampilan */
+    transition: top 0.3s;
+    background-color: yellow;
+}
+.login {
+    display: flex;  
+    background-color: #1D4AE8;
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    width: 150px;
+    font: 600 15px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.login:hover {
+    background-color: #e7e4e4;
+    color: #1D4AE8;
+}
+.header.scrolled {
+    top: -100px; /* Sesuaikan dengan tinggi header */
+    transition: top 0.3s;
+}
+.text-top {
+    position: absolute;
+    top: 46%; /* Posisi vertikal tengah */
+    left: 25%; /* Posisi horizontal tengah */
+    transform: translate(-50%, -50%); /* Memindahkan teks ke tengah */
+    z-index: 2;
+    display: flex;
+    width: 504px;
+    flex-direction: column;
+    gap: 10px;
+}
+.text-top .text1 {
+    font: 500 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.827);
+}
+.text-top .text2 {
+    font: 700 40px/1.3 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.788);
+}
+.text-top .text3 {
+    font: 700 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.827);
+}
+.mid-container {
+    position: relative;
+}
+.mid-container .seperator {
+    display: flex;
+    z-index: 2;
+    width: 100%;
+    height: 120px;
+    background-color: #1D4AE8;
+    justify-content: center;
+    align-items: center;
+}
+.over {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: -120px;
+    border-radius: 6px;
+    display: flex;
+    z-index: 3;
+    width: 90%;
+    height: 120px;
+    background-color: #ffffff;
+    flex-direction: column;
+}
+.over .top {
+    display: flex;
+    flex-direction: row;
+    font: 600 14px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+.over .top img {
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+}
+.over .bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}
+.over .bottom .items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.over .bottom .items h1{
+    font: 650 15px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.over .bottom .items .sub {
+    margin-top: -5px;
+    display: flex;
+}
+.over .bottom .items .sub p{
+    font: 500 13px/0.58 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.over .bottom .divider{
+    margin-top: 10px;
+    width: 1.5px;
+    height: 40px;
+    background-color: #B8B8B8;
+}
+
+/* --------------------------------middle---------------------- */
+
+.description-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.top-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.top-text .text1 {
+    font: 500 40px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+.top-text .text2 {
+    font: 400 17px/1.5 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+
+
+.flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.flow .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.flow .line{   
+    width: 25%;
+    height: auto;
+    margin-top: -200px;
+    margin-left: -70px;
+    margin-right: -70px;
+}
+.flow .item .box {
+    display: flex;
+    height: 106px;
+    width: 106px;
+    border-radius: 30px;
+    background-color: rgba(29, 73, 232, 0.145);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.flow .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flow .item .text .text1 {
+    font: 600 20px/0.58 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+.box .phone {
+    width: 44px;
+    height: 44px;
+}
+.flow .item .text .text2 {
+    font: 400 14px/1.5 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    width: 270px;
+    text-align: center;
+    margin: 2px;
+}
+/* ----------------------------------------------------bottom description-------------------------------------- */
+.bottom-description {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #1D4AE8;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-description .top-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottom-description .top-text h1 {
+    font: 400 38px/0.58 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+}
+.bottom-description .top-text p {
+    font: 300 18px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 720px;
+}
+.options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40PX;
+    margin-bottom: 50px;
+}
+.options .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options .box .item{
+    display: flex;
+    background-color: #1D4AE8;
+    width: 549px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #90A3BF;
+}
+.options .box .item.active {
+    border-bottom: 3px solid #ffffff;
+}
+.options .box .item:hover {
+    border-bottom: 3px solid #ffffff;
+}
+.options .box .item .text {
+    text-decoration: none;
+    font: 500 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgba(255, 255, 255, 0.604);
+}
+.options .box .item .text.active {
+    color: rgb(255, 255, 255);
+}
+.options .box .item .text:hover {
+    color: rgb(255, 255, 255);
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card .item {
+    display: flex;
+    width: 244px;
+    height: 328px;
+    background-color: #C4C4C4;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.card .item .card-image {
+    width: 274px;
+    height: 348px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+.card .item p {
+    position: absolute; /* Menambahkan posisi absolut ke elemen teks */
+    margin-left: 20px;
+    font: 500 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan teks agar lebih terbaca */
+    z-index: 2; /* Memastikan teks berada di atas gambar */
+    align-self: flex-start;
+    width: 100%;
+    height: auto;
+    margin-left: 50px;
+}
+.showmore {
+    display: flex;
+    width: 156px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.showmore:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.showmore a {
+    text-decoration: none;
+    font: 500 14px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+/* --------------------------------------about us------------------------------------- */
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+}
+.about-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-item .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.about-item .text h1{
+    font: 600 48px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+.about-item .text p{
+    text-align: center;
+    font: 400 18px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    width: 520px;
+}
+.about-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 160px;
+    margin-bottom: 90px;
+}
+.about-row img {
+    width: 566px;
+    height: auto;
+}
+.row-item {
+    display: flex;
+    flex-direction: column;
+}
+.row-item .item{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.row-item .item .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    height: 52px;
+    width: 52px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.row-item .item .box img {
+    height: 28px;
+    width: 28px;
+}
+.row-item .item .box .item-text {
+    display: flex;
+    flex-direction: column;
+}
+.item-text h1 {
+    font: 600 22px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.item-text p{
+    font: 400 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    width: 430px;
+}
+/* --------------------------------------------footer--------------------------------------------- */
+.footer {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding-top: 40px;
+}
+.footer-item {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    padding: 50px;
+}
+.footer-item .left {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    gap: 20px;
+}
+.left .icon {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.left .icon img {
+    width: 37px;
+    height: 37px;
+}
+.facebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B132A;
+    box-shadow: 0px 4px 9px rgb(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 33px;
+    height: 33px;
+}
+.twitter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B132A;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 33px;
+    height: 33px;
+}
+.instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0B132A;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 33px;
+    height: 33px;
+}
+.footer-item .left h1 {
+    font: 600 32px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.footer-item .left img {
+    width: 294px;
+    height: auto;
+}
+.footer-item .left p {
+    font: 400 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    width: 302px;
+}
+.footer-item .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 150px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.right-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.right-item h1{
+    font: 600 20px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.right-item a{
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font: 450 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.right-item a:hover{
+    text-decoration: underline;
+}
+.bottom-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding-bottom: 40px;
+}
+.bottom-page .seperator {
+    width: 93%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #131313;
+}
+.bottom-text {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+}
+.bottom-text p {
+    font: 450 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+}
+.bottom-text .text-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    flex-direction: row;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
+.bottom-text .text-right a{
+    font: 450 16px/1 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.bottom-text .text-right a:hover {
+    text-decoration: underline;
+}
+.facebook img {
+    width: 37px;
+    height: 37px;
+}
+.twitter img {
+    width: 37px;
+    height: 37px;
+}
+.instagram img {
+    width: 37px;
+    height: 37px;
+}

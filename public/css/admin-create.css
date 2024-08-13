@@ -1,0 +1,79 @@
+body, html {
+    font-family: "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Pastikan hanya ada scrollbar vertikal jika dibutuhkan */
+    height: 100%;
+    background-color: #f4f4f4;
+}
+h1 {
+    color: #333;
+    font: 700 20px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+    margin-left: 0;
+    margin-right: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 300px;
+    padding: 1px 16px 16px;
+    align-items: center;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: auto;
+    padding: 16px;
+    padding-top: 1px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font: 500 16px/0.88 "Plus Jakarta Sans", Helvetica, Arial, serif;
+}
+input[type="text"], input[type="number"] {
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    width: 100px;
+    height: auto;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.semai {
+    width: 100px;
+}
